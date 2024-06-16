@@ -2,19 +2,13 @@ import { defineConfig } from 'vite';
 import path, {join} from "path";
 
 export default defineConfig({
-    // publicDir : "public"
+    publicDir : "public",
     server : {
         open : true,
         define: {
             __APP_VERSION__: JSON.stringify('v1.0.0'),
-          },
-        // '/api': {
-        //     target: 'http://jsonplaceholder.typicode.com',
-        //     changeOrigin: true,
-        //     configure: (proxy, options) => {
-        //     // proxy 是 'http-proxy' 的实例
-        //     }
-        // }
+        }
+
     },
     build : {
         outDir : "build",
@@ -45,5 +39,4 @@ export default defineConfig({
 
         }
     }
-
 })
