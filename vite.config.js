@@ -3,6 +3,7 @@ import path, {join} from "path";
 
 export default defineConfig({
     publicDir : "public",
+    base : "xr",
     server : {
         open : true,
         define: {
