@@ -49,25 +49,11 @@ $(".change").addEventListener("click", () => {
 $("section").addEventListener("click", async e => {
     location.href = "./details.html";
     let id = e.target.getAttribute("dataId");
-    const res1 = await axios.get("https://zyxcl.xyz/exam_api/zh");
-    const res2 = await axios.get("https://zyxcl.xyz/exam_api/zh");
-    const res3 = await axios.get("https://zyxcl.xyz/exam_api/zh");
-    // console.log(res)
-    res1.data.items.forEach(obj => {
+    const res = await axios.get("https://zyxcl.xyz/exam_api/zh");
+    console.log(res)
+    res.data.items.forEach(obj => {
         if(id == obj.item_id){
-            // console.log(123)
-            localStorage.setItem("data", JSON.stringify(obj))
-        }
-    })
-    res2.data.items.forEach(obj => {
-        if(id == obj.item_id){
-            // console.log(123)
-            localStorage.setItem("data", JSON.stringify(obj))
-        }
-    })
-    res3.data.items.forEach(obj => {
-        if(id == obj.item_id){
-            // console.log(123)
+            console.log(123)
             localStorage.setItem("data", JSON.stringify(obj))
         }
     })
